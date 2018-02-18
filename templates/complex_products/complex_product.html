@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+   <div class="row">
+<h2 class="text-center"> {{ complex_product.name }} </h2>
+    </div>
+
+    <div class="row">
+
+
+        <div class="col s6 prod_photo">
+            <div class="complex_product-image-item">
+                <img src="{{ image_item.image.url }}" class="img-responsive">
+            <div id="gallery">
+
+                {% for image_item in complex_product.complexproductimage_set.all %}
+                    <a href="{{ image_item.image.url }}"><img src="{{ image_item.image.url }}" class="responsive-img" alt="" /></a>
+                {% endfor %}
+
+            </div>
+        </div>
+        </div>
+
+
+
+            <div class="col s6 prod_main">
+
+                <div class="row">
+                    <div class="col s6">
+                    <p>
+                       Цена от: {{ complex_product.price }} руб.
+                     </p>
+
+                    <p>*Предложение не является публичной офертой.</p>
+                    </div>
+                    <div class="col s6">
+<button class="button btn-large blue">Заказать</button>
+                    </div>
+                </div>
+
+
+                <div class="col s12">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#description" aria-controls="home" role="tab" data-toggle="tab">
+                                Характеристики
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#delivery" aria-controls="profile" role="tab" data-toggle="tab">
+                                Доставка
+                            </a>
+                        </li>
+
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content complex_product-description-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="description">
+                            <div class="desc"> {{ complex_product.description|safe }} </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="delivery">
+                            <p> {{ complex_product.delivery }}</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="row">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#options" aria-controls="home" role="tab" data-toggle="tab">
+                                Опции
+                            </a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="#reviews" aria-controls="profile" role="tab" data-toggle="tab">
+                                Обзоры
+                            </a>
+                        </li>
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content complex_product-reviews-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="options">
+                            <p>{{ complex_product.opt_desc|safe }}</p>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="reviews">
+
+                        </div>
+
+                      </div>
+                </div>
+        </div>
+
+        </div>
+    </div>
+{% endblock %}

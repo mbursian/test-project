@@ -1,0 +1,79 @@
+html, body{
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("../img/fonb.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.main_cont{
+background-image: url("../img/fonc.png");
+}
+
+.main_menu{
+    position: relative;
+    background: white;
+    background-image: url("../img/headbg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 28ex;
+    padding-top: 20px;
+    margin-bottom: 15ex;
+}
+.section-top{
+    margin-top: 40px;
+}
+.headimg{
+    position: relative;
+    top: 3.5ex;
+    max-height: 10ex;
+    min-height: 10ex;
+}
+.btnrow{
+    position: relative;
+
+    top: -12ex;
+    left: 10ex;
+    max-height: 5ex;
+
+}
+
+.imgButton {
+min-height: 5.5ex;
+
+}
+.button{
+
+}
+
+.prod_main{
+    background: white;
+}
+
+
+.product-description-tabs{
+    min-height: 450px;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+
+.product-reviews-tabs{
+    background: white;
+    height: auto;
+    min-height: 450px;
+    padding: 10px;
+}
+.complex-product-description-tabs{
+    min-height: 450px;
+    max-height: 450px;
+    overflow-y: scroll;
+}
+.complex_product-reviews-tabs{
+    background: white;
+    height: auto;
+    min-height: 450px;
+    padding: 10px;
+}

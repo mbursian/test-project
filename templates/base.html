@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+<link rel="stylesheet" type="text/css" media="all" href="{% static 'css/font-awesome.min.css' %}" />
+<link rel="stylesheet" type="text/css" media="all" href="{% static 'css/jgallery.min.css' %}" />
+
+
+</head>
+<body>
+
+
+            {% include 'navbar.html' %}
+<div class="container main_cont">
+            {% block content %}
+            {% endblock content %}
+
+</div>
+
+
+     {% include 'footer.html' %}
+
+ <!-- jQuery -->
+
+    <!-- Latest compiled and minified JavaScript -->
+
+
+
+
+
+    <!-- jQuery -->
+
+<script type="text/javascript" src="{% static 'js/jquery-2.0.3.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/jgallery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/touchswipe.min.js' %}"></script>
+<script type="text/javascript">
+$( function() {
+    $( '#gallery' ).jGallery();
+} );
+</script>
+ <script src="{% static '/js/materialize.min.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+</script>
+
+    <!-- Latest compiled and minified JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+</body>
+</html>

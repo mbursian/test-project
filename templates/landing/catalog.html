@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<h2> Каталог </h2>
+    <div class="row">
+
+
+        <div class="section main_prod">
+
+            <div class="row">
+
+                {% for product_image in products_images %}
+                    <div class="col s6">
+                        <div class="card medium">
+                            <div class="card-image">
+                                    <img  src="{{ product_image.image.url }}" class="responsive-img">
+                                    <span class="card-title"> {{ product_image.product.product_name}}</span>
+                            </div>
+                            <div class="card-content">
+                            <p class="cardop">
+                            {{ product_image.product.name }}
+                            </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'product' product_image.product.id %}">Подробнее</a>
+                    </div>
+                </div>
+               </div>
+                {% endfor %}
+
+
+     {% for complex_product_image in complex_products_images %}
+
+                           <div class="col s6">
+                        <div class="card medium">
+                            <div class="card-image">
+                                    <img  src="{{ complex_product_image.image.url }}" class="responsive-img">
+                                    <span class="card-title"> {{ complex_product_image.complex_product.complex_product_name }}</span>
+                            </div>
+                            <div class="card-content">
+                            <p class="cardop">
+                            {{ complex_product_image.complex_product.name }}
+                            </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{% url 'complex_product' complex_product_image.complex_product.id %}">Подробнее</a>
+                    </div>
+                </div>
+               </div>
+
+                {% endfor %}
+            </div>
+
+        </div>
+{% endblock %}
