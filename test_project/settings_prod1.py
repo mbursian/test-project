@@ -4,9 +4,9 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hello',
-        'USER': 'hello_django',
-        'PASSWORD': 'Melamory1353',
+        'NAME': 'db4',
+        'USER': 'django_db',
+        'PASSWORD': 'Melory1353',
         'HOST': 'localhost',
         'PORT': '',
 
